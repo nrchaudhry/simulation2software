@@ -1,0 +1,78 @@
+<div class="collapse-card-h container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div class="card-primary card">
+                    <div class="card-header">
+                        <div class="align-items-center row">
+                            <div class="col" >
+                                <a href="javascript:void" aria-controls="collapse-customerinfo1" aria-expanded="true"
+                                    class="card-title">Request</a>
+                            </div>
+                        </div>
+                    </div>
+<!-- (click)="Expand()" -->
+                    <br />
+                    <div class="collapse show card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">File</label>
+                                        <input type="text" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="file" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Server</label>
+                                        <input type="text" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="server" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Port</label>
+                                        <input type="text" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="port" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Username</label>
+                                        <input type="text" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="username" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Password</label>
+                                        <input type="password" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Package</label>
+                                        <input type="text" class="form-control" name="deliverydate" maxlength="50"
+                                            [(ngModel)]="package" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3">
+                                    <button id="savebutton" class="btn btn-success ml-2" (click)="submit()">
+                                     Submit 
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
