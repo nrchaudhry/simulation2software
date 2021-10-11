@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
      
       setTimeout(() => this.toastr.success("Sucessfully loged in!"));
       this.offSpinner();
-      redirectByHref("/#/home/dashboard")
+      redirectByHref("/#/main")
       console.log("wellcome to UM");
       return;
     } else {
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
                 this.toastr.success("Sucessfully loged in!")
               );
               this.offSpinner();
-              redirectByHref("/#/home/dashboard")
+              redirectByHref("/#/main")
               return;
             } else {
               console.log("go to login ");

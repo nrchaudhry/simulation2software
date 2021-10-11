@@ -4,7 +4,6 @@ import { ToastrService } from 'ngx-toastr';
 import { LoginService } from 'src/app/Pages/login/login.service';
 import { OnFailService } from 'src/app/services/on-fail.service';
 import { SidebarService } from 'src/app/services/sidebar.service';
-import { OrderService } from 'src/app/modules/salesorders/services/order.service';
 import * as $ from 'jquery'
 @Component({
   selector: 'app-header',
@@ -26,8 +25,7 @@ export class HeaderComponent implements OnInit {
     private toastrservice: ToastrService,
     private _onFail_: OnFailService,
     private sidebarservice: SidebarService,
-    private loginservice: LoginService,
-    private orderservice: OrderService
+    private loginservice: LoginService
   ) { }
 
   ngOnInit() {
@@ -115,27 +113,27 @@ export class HeaderComponent implements OnInit {
       this.anything = false;
     }
     else {
-      this.Timeout = setTimeout(() => {
-        this.orderservice.search(cust).subscribe(response => {
-          if (response) {
-            if (response.error && response.status) {
-              this.toastrservice.warning("Message", " " + response.message);
-              this.results = "No Record";
-              this.anything = false;
-            } else if (response.length == 0) {
-              this.results = "No Record";
-              this.anything = false;
-            }
-            else {
-              this.bonusschemeAll = response;
-              $(".suggestions").fadeIn("slide");
-              this.anything = true;
-            }
-          }
-        }, error => {
-          this._onFail_.onFail(error);
-        })
-      }, 2000);
+      // this.Timeout = setTimeout(() => {
+      //   this.orderservice.search(cust).subscribe(response => {
+      //     if (response) {
+      //       if (response.error && response.status) {
+      //         this.toastrservice.warning("Message", " " + response.message);
+      //         this.results = "No Record";
+      //         this.anything = false;
+      //       } else if (response.length == 0) {
+      //         this.results = "No Record";
+      //         this.anything = false;
+      //       }
+      //       else {
+      //         this.bonusschemeAll = response;
+      //         $(".suggestions").fadeIn("slide");
+      //         this.anything = true;
+      //       }
+      //     }
+      //   }, error => {
+      //     this._onFail_.onFail(error);
+      //   })
+      // }, 2000);
     }
   }
 
